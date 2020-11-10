@@ -56,7 +56,7 @@ print(a) """
 """ a=[int(i) for i in input().split()]
 print(a) """
 
-def name(n):
+''' def name(n):
     n=n.split(" ")
     return n
 
@@ -68,4 +68,5 @@ def summ_spis(a):
         i+=1
     return s
 s=input()
-print(summ_spis(s))
+print(summ_spis(s)) '''
+
