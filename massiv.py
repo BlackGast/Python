@@ -15,3 +15,5 @@ for i in massiv:
         print(j, end=" ")
     print()
 
+for i in massiv:
+    print(i)
