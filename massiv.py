@@ -1,6 +1,6 @@
 from random import randint
 
-N=int(input("stolb"))
+N=int(input("столбец"))
 M=int(input("col"))
 massiv=[]
 
