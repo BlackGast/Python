@@ -1,8 +1,14 @@
 
 import telebot;
 bot = telebot.TeleBot('1337818658:AAFMlarnoQBZDOsvguREUMrRKq9cqEnnYdc');
-@bot.message_handler(content_types=['text', 'document', 'audio'])
 
+@bot.message_handler(commands=['start'])
+def handle_start(message):
+    bot.send_message(message.from_user.id, "напиши /help")
+@bot.message_handler(commands=['stop'])
+def handle_stop(message):
+    bot.send_message(message.from_user.id, "Пока!")
+@bot.message_handler(content_types=['text', 'document', 'audio'])
 def get_text_messages(message):
     if message.text == 'Привет':
         bot.send_message(message.from_user.id, "Привет, чем я могу тебе помочь?")
