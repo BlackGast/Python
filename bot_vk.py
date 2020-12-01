@@ -1,10 +1,11 @@
 import requests
-import vk_api 
-from vk_api.longpoll import VKLongPoll, VKEventType
+from vk_api import VkApi
+vk_session = VkApi(token='73368e27072c28a4d71c929e39f182bb88ef8a459cb187d605041505fb7813b74db61427a6d3886a5b634')
+from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
+from vk_api.utils import get_random_id
 
-vk_session = vk_api.VkApi( token = '#73368e27072c28a4d71c929e39f182bb88ef8a459cb187d605041505fb7813b74db61427a6d3886a5b634')
 
-longpoll = VKLongPoll(vk_sesssion)
+long_poll = VkBotLongPoll(vk_session, '#TestBot74')
 vk = vk.session.get_api()
 for event in longpoll.listen():
     if event.type == VKEventType.MESSAGE_new and event.to_me and event.text:
