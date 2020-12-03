@@ -1,4 +1,5 @@
 import random as random
+from random import randint
 
 #def coast():
 #    a=int(input("Введите цену 1 кг конфет: "))
@@ -67,22 +68,22 @@ import random as random
 #    print((a+4*b)*(a-3*b)+a**2)
 #pr1(2,3)
 
-def pr2(): #Задание 2
-    array=[]
-    i=0
-    while i<10:
-        array.append(random.randint(1,20))
-        i += 1
-    print(array)
-    avg=0
-    for i in range(len(array)):
-        avg+=array[i]
-    avg/=len(array)
-    for i in range(len(array)):
-        if array[i]>10:
-            array[i]=avg
-    print(array)
-pr2()
+#def pr2(): #Задание 2
+#    array=[]
+#    i=0
+#    while i<10:
+#        array.append(random.randint(1,20))
+#        i += 1
+#    print(array)
+#    avg=0
+#    for i in range(len(array)):
+#        avg+=array[i]
+#    avg/=len(array)
+#    for i in range(len(array)):
+#        if array[i]>10:
+#            array[i]=avg
+#    print(array)
+#pr2()
 
 #def pr3(a): #Задание 3 Готово
 #    t=0
@@ -100,4 +101,16 @@ pr2()
 #a=[4,3,2,1]
 #pr3(a)
 
-
+def student():
+    n=int(input("Количестко учащихся"))
+    p=4
+    array=[]
+    for i in n:
+        podarray=[]
+        for j in p:
+            podarray.append(randint(1,5))
+    for i in array:
+        for j in i:
+            print(j, end=" ")
+        print()
+student()
